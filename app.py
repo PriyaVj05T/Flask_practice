@@ -15,7 +15,7 @@ def math_operator():
 
     if operation == "add":
         result = int(number1) + int(number2)
-    elif operation == "multipy":
+    elif operation == "multiply":
         result =  int(number1) * int(number2)
     elif operation == "division":
         result =  int(number1) / int(number2)  
