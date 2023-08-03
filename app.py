@@ -1,4 +1,4 @@
-from flask import Flask,request, render_template
+from flask import Flask,request, render_template, jsonify
 
 obj = Flask(__name__)  #__name__ is a special variable holding name of module i.e. __main__ here
 
@@ -14,14 +14,14 @@ def math_operator():
     number2=request.json["number2"]
 
     if operation == "add":
-        result = number1 + number2
+        result = int(number1) + int(number2)
     elif operation == "multipy":
-        result = number1 * number2  
+        result =  int(number1) * int(number2)
     elif operation == "division":
-        result = number1 / number2   
+        result =  int(number1) / int(number2)  
     else: 
-        result = number1 - number2   
-    return result        
+        result =  int(number1) - int(number2) 
+    return jsonify(result)        
 
 
 
