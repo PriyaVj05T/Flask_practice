@@ -14,7 +14,7 @@ def math_operator():
     number2=request.json["number2"]
 
     if operation == "add":
-        result = number1+ number2
+        result = number1 + number2
     elif operation == "multipy":
         result = number1 * number2  
     elif operation == "division":
